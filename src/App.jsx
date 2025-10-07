@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Play, Calendar, Award, Music } from 'lucide-react'
 import './App.css'
-import profileImage from './assets/shun_profile.png'
+import profileImage from './assets/shun_profile_latest.png'
 import danceVideo from './assets/1000006194.mp4'
 
 function App() {
