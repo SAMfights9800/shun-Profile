@@ -76,7 +76,7 @@ function App() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-xl md:text-2xl text-white/90 mb-8"
           >
-            13歳のダンサー | ヒップホップ・アクロバット・ジャズダンス
+            14歳のダンサー | ヒップホップ・アクロバット・ジャズダンス
           </motion.p>
 
           <motion.div
@@ -106,7 +106,7 @@ function App() {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer" onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -150,7 +150,7 @@ function App() {
                 <p className="text-gray-600">
                   <strong>名前:</strong> Shun<br />
                   <strong>生年月日:</strong> 9月8日<br />
-                  <strong>年齢:</strong> 13歳
+                  <strong>年齢:</strong> 14歳
                 </p>
               </div>
             </motion.div>
