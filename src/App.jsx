@@ -140,7 +140,7 @@ function App() {
               About <span className="text-purple-600">Me</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              ダンスを通じて表現することが大好きな13歳です。様々なジャンルのダンスに挑戦し、日々成長を続けています。
+              ダンスを通じて表現することが大好きな14歳です。様々なジャンルのダンスに挑戦し、日々成長を続けています。
             </p>
           </motion.div>
 
