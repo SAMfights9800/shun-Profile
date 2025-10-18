@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Play, Calendar, Award, Music } from 'lucide-react'
 import './App.css'
@@ -6,8 +6,18 @@ import profileImage from './assets/shun_profile_latest.png'
 import danceVideo from './assets/1000006194.mp4'
 
 function App() {
+  const [bgColor, setBgColor] = useState("from-purple-900 via-blue-900 to-indigo-900");
+
+  const toggleBgColor = () => {
+    setBgColor(prevColor => 
+      prevColor === "from-purple-900 via-blue-900 to-indigo-900" 
+        ? "from-red-900 via-orange-900 to-yellow-900" 
+        : "from-purple-900 via-blue-900 to-indigo-900"
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+    <div className={`min-h-screen bg-gradient-to-br ${bgColor}`}>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -106,7 +116,7 @@ function App() {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer" onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer" onClick={toggleBgColor}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
